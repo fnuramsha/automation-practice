@@ -6,7 +6,7 @@ jobs
    -image: node:20.3.1
   steps:
    - checkout
-   - run: node test
+   - run: npm test
 
    workflows:
     build_now:

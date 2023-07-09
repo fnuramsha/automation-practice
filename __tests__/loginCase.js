@@ -5,7 +5,7 @@ const profileGenerator = require("random-profile-generator");
 
 (async() => {
     const profile = new profileGenerator.profile();
-  let driver = await new Builder().forBrowser(Browser.CHROME).build();
+    let driver = await new Builder().forBrowser(Browser.CHROME).build();
     await driver.get('https://www.moebel-kraft.de');
     await driver.findElementBy.cssSelector('a.headerElement__link.headerElement__link--login').click()
     await driver.findElementBy.cssSelector('data-testid="loginEmailInput').fill()
