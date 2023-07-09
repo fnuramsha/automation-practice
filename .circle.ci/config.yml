@@ -7,10 +7,10 @@ jobs
   steps:
    - checkout
    - run:
-      name: "Run test"
-      command: npm test
-      environment:
-            HEAD_LESS: true
+        name: "Run test"
+        command: npm test
+        environment:
+              HEAD_LESS: true
 
    workflows:
     build_now:
