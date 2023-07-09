@@ -16,6 +16,8 @@ const screen = {
     const isHeadless = /^true$/i.test(process.env.HEAD_LESS);
     let builder = new Builder().forBrowser(Browser.CHROME)
     let driver;
+    console.log(process.env)
+    console.log(process.env.HEAD_LESS)
     if (isHeadless) {
         driver = await builder
             .setChromeOptions(new chrome.Options().headless())
