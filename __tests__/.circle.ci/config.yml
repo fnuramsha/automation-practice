@@ -1,0 +1,16 @@
+version 2.1
+
+jobs
+  build: 
+   docker:
+   -image: node:20.3.1
+  steps:
+   - checkout
+   - run: node test
+
+   workflows:
+    build_now:
+     jobs:
+       - build
+   
+  
