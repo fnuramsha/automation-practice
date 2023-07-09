@@ -11,14 +11,11 @@ const profileGenerator = require("random-profile-generator");
     await driver.findElementBy.cssSelector('data-testid="loginEmailInput').fill()
     await driver.findElementBy.cssSelector('#loginPassword[data-testid="loginPasswordInput"]').fill(profile.lastName).fill()
     await driver.findElementBy('#login-submit').click()
-    
-
-    
     await page.locator('a.headerElement__link.headerElement__link--login').click()
     await page.locator('data-testid="loginEmailInput"')
+    await driver.quit();
     // await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
     // await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
-  
-     await driver.quit();
+    
   
 })();
