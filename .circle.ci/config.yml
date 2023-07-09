@@ -7,15 +7,15 @@ jobs
     environment:
       HEAD_LESS: true
       
-  steps:
-   - checkout
-   - run:
-        name: "Run test"
-        command: npm test
+    steps:
+    - checkout
+    - run:
+          name: "Run test"
+          command: npm test
 
-   workflows:
-    build_now:
-     jobs:
-       - build
+    workflows:
+      build_now:
+      jobs:
+        - build
    
   
