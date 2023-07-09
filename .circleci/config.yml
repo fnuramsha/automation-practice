@@ -20,7 +20,7 @@ jobs:
   
 workflows:
   build_now:
-  jobs:
-    - build
+    jobs:
+      - build
   
   
