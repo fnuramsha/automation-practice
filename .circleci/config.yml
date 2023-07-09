@@ -8,15 +8,15 @@ jobs:
       HEAD_LESS: true
       
     steps:
-    - run:
-        name: "Setup JRE"
-        command: |
-          apt-get install default-jre
+    # - run:
+    #     name: "Setup JRE"
+    #     command: |
+    #       apt-get install default-jre
     - checkout
     - run:
           name: "Run test"
           command: |
-            echo 'export HEAD_LESS="true"'
+            npm test
   
 workflows:
   build_now:
