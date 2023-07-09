@@ -6,7 +6,11 @@ jobs
    -image: node:20.3.1
   steps:
    - checkout
-   - run: npm test
+   - run:
+      name: "Run test"
+      command: npm test
+      environment:
+            HEAD_LESS: true
 
    workflows:
     build_now:
