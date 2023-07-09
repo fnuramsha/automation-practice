@@ -11,8 +11,9 @@ jobs
     - checkout
     - run:
           name: "Run test"
-          command: npm test
-
+          command: |
+            echo 'export HEAD_LESS="true"'
+            npm test
     workflows:
       build_now:
       jobs:
