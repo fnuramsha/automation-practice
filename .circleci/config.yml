@@ -8,10 +8,10 @@ jobs:
       HEAD_LESS: true
       
     steps:
-    # - run:
-    #     name: "Setup JRE"
-    #     command: |
-    #       apt-get install default-jre
+    - run:
+        name: "Setup chrome"
+        command: |
+          curl https://intoli.com/install-google-chrome.sh | bash
     - checkout
     - run: npm install
     - run:
