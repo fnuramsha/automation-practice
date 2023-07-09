@@ -13,11 +13,11 @@ const screen = {
 
 (async () => {
     const profile = new profileGenerator.profile();
-    const isHeadless = /^true$/i.test(process.env.HEAD_LESS);
+    const isHeadless = /^true$/i.test(process.env.CI);
     let builder = new Builder().forBrowser(Browser.CHROME)
     let driver;
     console.log(process.env)
-    console.log(process.env.HEAD_LESS)
+    console.log(process.env.CI)
     if (isHeadless) {
         driver = await builder
             .setChromeOptions(new chrome.Options().headless())
