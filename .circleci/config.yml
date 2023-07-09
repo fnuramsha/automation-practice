@@ -13,6 +13,7 @@ jobs:
     #     command: |
     #       apt-get install default-jre
     - checkout
+    - run: npm install
     - run:
           name: "Run test"
           command: |
