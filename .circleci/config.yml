@@ -18,9 +18,9 @@ jobs:
           command: |
             echo 'export HEAD_LESS="true"'
   
-  workflows:
-    build_now:
-    jobs:
-      - build
+workflows:
+  build_now:
+  jobs:
+    - build
   
   
