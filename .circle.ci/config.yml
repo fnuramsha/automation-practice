@@ -17,11 +17,10 @@ jobs
           name: "Run test"
           command: |
             echo 'export HEAD_LESS="true"'
-            echo ${HEAD_LESS}
-            npm test
-    workflows:
-      build_now:
-      jobs:
-        - build
-   
+  
+  workflows:
+    build_now:
+    jobs:
+      - build
+  
   
